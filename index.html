@@ -72,11 +72,30 @@
 
       <div class="container-fluid">
 		<h1>RMS Dashboard</h1>
-		<div id="section_ReqForm" class="border sectionDiv">
-			<form action="#">
-				<div class="form-group">
-					<label for="customerName">Customer Name</label>
-					<input type="text" class="form-control" id="customerName" name="customerName">
+		<div id="section_ReqForm" class="border sectionDiv container-fluid">
+			<form action="#" class="row">
+				<div class="form-group col-sm-2">
+					<label for="customerName" class="">Name</label>
+					<input maxlength="25" type="text" class="form-control" id="customerName" name="customerName">
+				</div>
+				<div class="form-group col-sm-2">
+					<label for="customerSurname" class="">Surname</label>
+					<input maxlength="25" type="text" class="form-control" id="customerSurname" name="customerSurname">
+				</div>
+				<div class="form-group col-sm-2">
+					<label for="customerMobile" class="">Mobile</label>
+					<input maxlength="10" type="text" class="form-control" id="customerMobile" name="customerMobile">
+				</div>
+				<div class="form-group col-sm-2">
+					<label for="customerId" class="">Id_number</label>
+					<input type="text" class="form-control" id="customerId" name="customerId">
+				</div>
+				<div class="form-group col-sm-2">
+					<label for="reqAmount" class="">Request Amount</label>
+					<input  type="number" class="form-control" id="reqAmount" name="reqAmount">
+				</div>
+				<div class="form-group col-sm-2">
+					<input  type="submit" class="form-control" id="reqSubmit" name="reqSubmit">
 				</div>
 			</form>
 		</div>
