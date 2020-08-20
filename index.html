@@ -29,9 +29,9 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading text-dark"><h3>Ebuhlanti RMS</h3></div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">My Collections</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">All Collections</a>
+        <a href="#" id="dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" id="myCollections" class="list-group-item list-group-item-action bg-light">My Collections</a>
+        <a href="#" id="allCollections" class="list-group-item list-group-item-action bg-light">All Collections</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -99,7 +99,7 @@
 				</div>
 			</form>
 		</div>
-		<div id="section_Table" class="border sectionDiv">
+		<div id="section_ReqTable" class="border sectionDiv">
 			<h5>Request List</h5>
 			<table id="requestTable" class="display">
 				<thead>
@@ -120,7 +120,15 @@
 						<td>18/082020</td>
 						<td>R1885.65</td>
 						<td>External</td>
-						<td>Approved</td>
+						<td>
+							<a class="dropdown-toggle" href="#" id="statusDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Approved</a>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="statusDropdown">
+								<a class="dropdown-item" href="#">Approved</a>
+								<a class="dropdown-item" href="#">Disbursed</a>
+								<a class="dropdown-item" href="#">Canceled</a>
+								<a class="dropdown-item" href="#">Rejected</a>
+							  </div>
+						</td>
 						<td> </td>
 					</tr>
 					<tr>
@@ -132,6 +140,26 @@
 						<td>Approved</td>
 						<td> </td>
 					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="section_MCol_Table" class="border sectionDiv">
+			<h5>Members Collections</h5>
+			<table id="collectionsTableM" class="display">
+				<thead>
+					<tr>
+						<th>ReqId</th>
+						<th>Client</th>
+						<th>Disbursment Date</th>
+						<th>Loan Amount</th>
+						<th>Expected amount</th>
+						<th>Loan Status</th>
+						<th>Outstanding</th>
+						<th>Payment</th>
+						<th>Payment Status</th>
+					</tr>
+				</thead>
+				<tbody>
 					<tr>
 						<td>230</td>
 						<td>Jack</td>
@@ -139,7 +167,9 @@
 						<td>R1885.65</td>
 						<td>External</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>555</td>
+						<td>150</td>
+						<td>Paid</td>
 					</tr>
 					<tr>
 						<td>230</td>
@@ -148,7 +178,9 @@
 						<td>R1200.65</td>
 						<td>Internal</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>555</td>
+						<td>150</td>
+						<td>Paid</td>
 					</tr>
 					<tr>
 						<td>230</td>
@@ -157,7 +189,9 @@
 						<td>R1885.65</td>
 						<td>External</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>555</td>
+						<td>150</td>
+						<td>Paid</td>
 					</tr>
 					<tr>
 						<td>230</td>
@@ -166,8 +200,28 @@
 						<td>R1200.65</td>
 						<td>Internal</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>555</td>
+						<td>150</td>
+						<td>Paid</td>
 					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="section_ACol_Table" class="border sectionDiv">
+			<h5>All Collections</h5>
+			<table id="collectionsTableA" class="display">
+				<thead>
+					<tr>
+						<th>ReqId</th>
+						<th>Member</th>
+						<th>Disbursment Date</th>
+						<th>Loan Amount</th>
+						<th>Expected amount</th>
+						<th>Loan Status</th>
+						<th>Outstanding</th>
+					</tr>
+				</thead>
+				<tbody>
 					<tr>
 						<td>230</td>
 						<td>Jack</td>
@@ -175,7 +229,8 @@
 						<td>R1885.65</td>
 						<td>External</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>566</td>
+
 					</tr>
 					<tr>
 						<td>230</td>
@@ -184,7 +239,8 @@
 						<td>R1200.65</td>
 						<td>Internal</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>566</td>
+
 					</tr>
 					<tr>
 						<td>230</td>
@@ -193,7 +249,8 @@
 						<td>R1885.65</td>
 						<td>External</td>
 						<td>Approved</td>
-						<td> </td>
+						<td>566</td>
+
 					</tr>
 					<tr>
 						<td>230</td>
@@ -202,34 +259,8 @@
 						<td>R1200.65</td>
 						<td>Internal</td>
 						<td>Approved</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>230</td>
-						<td>Jack</td>
-						<td>18/082020</td>
-						<td>R1885.65</td>
-						<td>External</td>
-						<td>Approved</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>230</td>
-						<td>Henry</td>
-						<td>17/082020</td>
-						<td>R1200.65</td>
-						<td>Internal</td>
-						<td>Approved</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>230</td>
-						<td>Jack</td>
-						<td>18/082020</td>
-						<td>R1885.65</td>
-						<td>External</td>
-						<td>Approved</td>
-						<td> </td>
+						<td>566</td>
+
 					</tr>
 				</tbody>
 			</table>
@@ -258,6 +289,33 @@
 <script type="text/javascript">
   	$(document).ready( function () {
     $('#requestTable').DataTable();
+	$('#collectionsTableM').DataTable();
+	$('#collectionsTableA').DataTable();
+
+	$(".sectionDiv").hide();
+	$("#section_ReqForm").show();
+	$("#section_ReqTable").show();
+
+	$("#allCollections").click(function(){
+		$(".sectionDiv").hide();
+		$("#section_ACol_Table").show();
+		
+	});
+
+	$("#myCollections").click(function(){
+		$(".sectionDiv").hide();
+		$("#section_MCol_Table").show();
+		
+	});
+
+	$("#dashboard").click(function(){
+		$(".sectionDiv").hide();
+		$("#section_ReqForm").show();
+		$("#section_ReqTable").show();
+		
+	});
+
+
 	});	
 </script>
 </body>
