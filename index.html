@@ -30,9 +30,8 @@
       <div class="sidebar-heading text-dark"><h3>Ebuhlanti RMS</h3></div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">My Collections</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">All Collections</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -73,6 +72,7 @@
       <div class="container-fluid">
 		<h1>RMS Dashboard</h1>
 		<div id="section_ReqForm" class="border sectionDiv container-fluid">
+			<h5>Submit a Customer request</h5>
 			<form action="#" class="row">
 				<div class="form-group col-sm-2">
 					<label for="customerName" class="">Name</label>
@@ -91,7 +91,7 @@
 					<input type="text" class="form-control" id="customerId" name="customerId">
 				</div>
 				<div class="form-group col-sm-2">
-					<label for="reqAmount" class="">Request Amount</label>
+					<label for="reqAmount" class="">Request_Amount</label>
 					<input  type="number" class="form-control" id="reqAmount" name="reqAmount">
 				</div>
 				<div class="form-group col-sm-2">
@@ -100,11 +100,11 @@
 			</form>
 		</div>
 		<div id="section_Table" class="border sectionDiv">
-			<h3>Request List</h3>
+			<h5>Request List</h5>
 			<table id="requestTable" class="display">
 				<thead>
 					<tr>
-						<th>R_ID</th>
+						<th>ReqId</th>
 						<th>EBU Member</th>
 						<th>Date of request</th>
 						<th>Amount</th>
