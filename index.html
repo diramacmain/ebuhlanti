@@ -19,6 +19,9 @@
 	<!--DataTables-->
 	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+	<!--CHARTIST-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 </head>
 
 <body class="">
@@ -31,7 +34,8 @@
       <div class="list-group list-group-flush">
         <a href="#" id="dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
         <a href="#" id="myCollections" class="list-group-item list-group-item-action bg-light">My Collections</a>
-        <a href="#" id="allCollections" class="list-group-item list-group-item-action bg-light">All Collections</a>
+		<a href="#" id="allCollections" class="list-group-item list-group-item-action bg-light">All Collections</a>
+		<a href="#" id="chartsPage" class="list-group-item list-group-item-action bg-light">Charts</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -72,7 +76,7 @@
       <div class="container-fluid">
 		<h1>RMS Dashboard</h1>
 		<div id="section_ReqForm" class="border sectionDiv container-fluid">
-			<h5>Submit a Customer request</h5>
+			<h3>Submit a Customer request</h3>
 			<form action="#" class="row">
 				<div class="form-group col-sm-2">
 					<label for="customerName" class="">Name</label>
@@ -100,7 +104,7 @@
 			</form>
 		</div>
 		<div id="section_ReqTable" class="border sectionDiv">
-			<h5>Request List</h5>
+			<h3>Request List</h3>
 			<table id="requestTable" class="display">
 				<thead>
 					<tr>
@@ -144,7 +148,7 @@
 			</table>
 		</div>
 		<div id="section_MCol_Table" class="border sectionDiv">
-			<h5>Members Collections</h5>
+			<h3>Members Collections</h3>
 			<table id="collectionsTableM" class="display">
 				<thead>
 					<tr>
@@ -208,7 +212,7 @@
 			</table>
 		</div>
 		<div id="section_ACol_Table" class="border sectionDiv">
-			<h5>All Collections</h5>
+			<h3>All Collections</h3>
 			<table id="collectionsTableA" class="display">
 				<thead>
 					<tr>
@@ -265,9 +269,28 @@
 				</tbody>
 			</table>
 		</div>
-		<div id="section_Graph" class="border sectionDiv">
+		<div id="section_Charts" class="border sectionDiv">
+			<!-- Site content goes here !-->
+			<div class="ct-chart ct-golden-section" id="chart1"></div>
+			<div class="ct-chart ct-golden-section" id="chart2"></div>
+
+			<script>
+			// Initialize a Line chart in the container with the ID chart1
+			new Chartist.Line('#chart1', {
+				labels: [1, 2, 3, 4],
+				series: [[100, 120, 180, 200]]
+			});
+
+			// Initialize a Line chart in the container with the ID chart2
+			new Chartist.Bar('#chart2', {
+				labels: [1, 2, 3, 4],
+				series: [[5, 2, 8, 3]]
+			});
+			</script>
+
 
 		</div>
+		
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -314,7 +337,11 @@
 		$("#section_ReqTable").show();
 		
 	});
-
+	$("#chartsPage").click(function(){
+		$(".sectionDiv").hide();
+		$("#section_Charts").show();
+		
+	});
 
 	});	
 </script>
