@@ -8,23 +8,16 @@
 <body>
 
         <div class="container" style="margin-top:100px;width:300px;">
-            <form action="includes/signup.inc.php" method="post">
+            <form action="includes/login.inc.php" method="post">
                 <div class="form-group">
-                    <input require type="text" name="uid" class="form-control" id="uid" placeholder="Username">
+                    <input required type="text" name="logInUid" class="form-control" id="logInUid" placeholder="enter username / email" required>
                     
                 </div>
                 <div class="form-group">
-                    <input type="email" name="mail" class="form-control" id="mail" placeholder="E-mail">
-                    
+                    <input required type="password" name="password" class="form-control" id="password" placeholder="enter password" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="pwd-repeat" class="form-control" id="pwd-repeat" placeholder="Repeat Password">    
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="form-control" name="signup-submit" value="signup" id="submit">
+                    <input type="submit" class="form-control" name="login-submit" value="login" id="submit">
                 </div>
             </form>
         </div>
