@@ -5,16 +5,20 @@
     </head>
     <body>
       <div class="container">
-        <form>
+        <form action="includes/login.inc.php">
           <div class="form-group">
-            <label for="usr">Name:</label>
+            <label for="usr">Username:</label>
             <input type="text" class="form-control" id="usr">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="pwd">
           </div>
+          <div class="form-group">
+            <input type="submit" class="form-control" name="login-submit" id="submit">
+          </div>
         </form>
+        <a href="signup.php">signup</a>
       </div>
     </body>
 </html>
