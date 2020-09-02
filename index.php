@@ -1,9 +1,10 @@
-<?php require "header.php";?>
+<?php 
+require "login.php";
+require "header.php";
+require "content.php";
+require "footer.php";
+?>
 
-<main>
-    <h1>Logged Out</h1>
-    <h1>loged In</h1>
-</main>
 
 
-<?php require "footer.php" ?>
+

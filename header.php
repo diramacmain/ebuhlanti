@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,11 +78,11 @@
         <form action="includes/login.inc.php" method="post">
           <div class="form-group">
             <label for="usr">Username:</label>
-            <input type="text" class="form-control" id="usr">
+            <input type="text" class="form-control" name="usr" id="usr">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd">
+            <input type="password" class="form-control" name="pwd" id="pwd">
           </div>
           <div class="form-group">
             <input type="submit" class="form-control" name="login-submit" id="login-submit">
