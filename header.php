@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,39 +60,23 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                User Name
+              <?php 
+                if(isset($_SESSION['userId']))
+                {
+                  echo $_SESSION['userName'];
+                }
+                else{
+                  echo "username";
+                }
+                ?>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Sign Out</a>
+                <a class="dropdown-item" href="./includes/logout.inc.php">Sign Out</a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
-
-      <div class="container">
-        <form action="includes/login.inc.php" method="post">
-          <div class="form-group">
-            <label for="usr">Username:</label>
-            <input type="text" class="form-control" name="usr" id="usr">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" name="pwd" id="pwd">
-          </div>
-          <div class="form-group">
-            <input type="submit" class="form-control" name="login-submit" id="login-submit">
-          </div>
-        </form>
-
-        <a href="signup.php">signup</a>
-
-        <form action="includes/logout.inc.php" method="post">
-          <div class="form-group">
-            <input type="submit" class="form-control" name="logout-submit" value="Log Out" id="logout-submit">
-          </div>
-        </form>
-      </div>

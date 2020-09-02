@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-
-        <div class="container" style="margin-top:100px;width:300px;">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <div class="container" style="margin-top:200px;width:300px;">
             <form action="includes/login.inc.php" method="post">
+                <div class="form-group">
+                    <h1>Ebuhlanti RMS</h1>
+                </div>
                 <div class="form-group">
                     <input required type="text" name="logInUid" class="form-control" id="logInUid" placeholder="enter username / email" required>
                     
