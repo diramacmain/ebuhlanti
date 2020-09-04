@@ -30,6 +30,7 @@ if(isset($_POST['login-submit']))
                 session_start();
                 $_SESSION['userName'] = $row['userName'];
                 $_SESSION['userId'] = $row['userId'];
+                require 'session.inc.php';
                 header("location:../index.php");
                 exit();
             }

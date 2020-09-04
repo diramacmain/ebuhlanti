@@ -1,32 +1,7 @@
 <div class="container-fluid">
 		  <!-- /#page-content-wrapper -->
 			<h1>RMS Dashboard</h1>
-			<!-- section_ReqForm start -->
-			<div id="section_ReqForm" class="border sectionDiv container-fluid">
-				<h3>Submit a Customer request</h3>
-				<form action="includes/request.inc.php" class="row">
-					<div class="form-group col-sm-2">
-						<input maxlength="25" type="text" class="form-control" id="customerName" name="customerName" placeholder="Name">
-					</div>
-					<div class="form-group col-sm-2">
-						<input maxlength="25" type="text" class="form-control" id="customerSurname" name="customerSurname" placeholder="Surname">
-					</div>
-					<div class="form-group col-sm-2">
-						<input maxlength="10" type="text" class="form-control" id="customerMobile" name="customerMobile" placeholder="Mobile">
-					</div>
-					<div class="form-group col-sm-2">
-						<input type="text" class="form-control" id="customerId" name="customerId" placeholder="Id_number">
-					</div>
-					<div class="form-group col-sm-2">
-						<input  type="number" class="form-control" id="reqAmount" name="reqAmount" placeholder="Request_Amount">
-					</div>
-					<div class="form-group col-sm-2">
-						<input  type="submit" class="form-control btn-success" id="reqSubmit" name="reqSubmit" >
-					</div>
-				</form>
-			</div>
-			<!-- section_ReqForm End -->
-
+			<?php require 'requestForm.php';?>
 			<!-- section_PayForm start -->
 			<div id="section_PayForm" class="border sectionDiv container-fluid">
 				<h3>Make Payment</h3>

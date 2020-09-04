@@ -64,6 +64,7 @@
                 if(isset($_SESSION['userId']))
                 {
                   echo $_SESSION['userName'];
+                  echo $_SESSION['PersonType'];
                 }
                 else{
                   echo "username";
