@@ -12,9 +12,6 @@ table{
 #section_ReqForm .form-group{
     min-width: 145px;
 }
-#reqSubmit{
-    margin-top: 32px;
-}
 .sectionDiv > h5{
     padding: 1em 1em 1em 0em; 
 }

@@ -4,29 +4,24 @@
 			<!-- section_ReqForm start -->
 			<div id="section_ReqForm" class="border sectionDiv container-fluid">
 				<h3>Submit a Customer request</h3>
-				<form action="#" class="row">
+				<form action="includes/request.inc.php" class="row">
 					<div class="form-group col-sm-2">
-						<label for="customerName" class="">Name</label>
-						<input maxlength="25" type="text" class="form-control" id="customerName" name="customerName">
+						<input maxlength="25" type="text" class="form-control" id="customerName" name="customerName" placeholder="Name">
 					</div>
 					<div class="form-group col-sm-2">
-						<label for="customerSurname" class="">Surname</label>
-						<input maxlength="25" type="text" class="form-control" id="customerSurname" name="customerSurname">
+						<input maxlength="25" type="text" class="form-control" id="customerSurname" name="customerSurname" placeholder="Surname">
 					</div>
 					<div class="form-group col-sm-2">
-						<label for="customerMobile" class="">Mobile</label>
-						<input maxlength="10" type="text" class="form-control" id="customerMobile" name="customerMobile">
+						<input maxlength="10" type="text" class="form-control" id="customerMobile" name="customerMobile" placeholder="Mobile">
 					</div>
 					<div class="form-group col-sm-2">
-						<label for="customerId" class="">Id_number</label>
-						<input type="text" class="form-control" id="customerId" name="customerId">
+						<input type="text" class="form-control" id="customerId" name="customerId" placeholder="Id_number">
 					</div>
 					<div class="form-group col-sm-2">
-						<label for="reqAmount" class="">Request_Amount</label>
-						<input  type="number" class="form-control" id="reqAmount" name="reqAmount">
+						<input  type="number" class="form-control" id="reqAmount" name="reqAmount" placeholder="Request_Amount">
 					</div>
 					<div class="form-group col-sm-2">
-						<input  type="submit" class="form-control" id="reqSubmit" name="reqSubmit">
+						<input  type="submit" class="form-control btn-success" id="reqSubmit" name="reqSubmit" >
 					</div>
 				</form>
 			</div>
