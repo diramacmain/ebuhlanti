@@ -1,7 +1,8 @@
 <div class="container-fluid">
 		  <!-- /#page-content-wrapper -->
 			<h1>RMS Dashboard</h1>
-			<?php require 'requestForm.php';?>
+			<?php 
+			require 'requestForm.php';?>
 			<!-- section_PayForm start -->
 			<div id="section_PayForm" class="border sectionDiv container-fluid">
 				<h3>Make Payment</h3>
